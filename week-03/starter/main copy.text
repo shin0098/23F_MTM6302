@@ -32,49 +32,33 @@ console.log(document.querySelector('[href^="https"]'))
 console.log( document.querySelector('[href*="cdn"]'))
 /*** Traversing the DOM  ***/
 //Return a HTMLCollection with the child elements of the main node
-
-console.log( $main.children )
-
 // Returns the first child node(that is an element node) of main
-
-console.log( $main.firstElementChild)
 // Returns the next sibling element of main
-console.log($main.nextElementSibling)
+
+
 
 /*** Manipulating attributes */
 //getAttribute()
-//Obtain the href attribute of $link
+//Obtain the href attribute of $navFirstOption
 
-console.log($link.getAttribute('href')) 
-console.log($link.href)
-
-console.log( $link.className)
 
 
 //exception calling attributes as properties
-console.log( $main.className )
-console.log( $main.style);
-console.log( $main.getAttribute('style'));
+// console.log( $main.className )
+// console.log( $main.style);
+// console.log( $main.getAttribute('style'));
 
 //setAttribute()
 //Set the ID 'hero' on the first 'div' element inside the 'main' element.
 
-$main.firstElementChild.setAttribute('id', 'hero')
-//Add 'text-bg-dark' class to the element with id hero; warning! (setAttribute removes current setting)
 
-const $hero = document.getElementById('hero')
-//$hero.setAttribute('class', 'text-bg-dark')
+//Add 'text-bg-dark' class to the element with id hero; warning!
 
 
 //Add the 'href' attribute to the 'continue reading...' hero link; https://imdac.github.io/mtm6302/
 
-const $heroCTA = document.querySelector('#hero a')
-$heroCTA.setAttribute('href', 'https://imdac.github.io/mtm6302/')
-
 
 //set the 'target' attribute of the her link to '_blank'
-
-$heroCTA.getAttribute('target', '_blank')
 
 // console.log($heroCTA.getAttribute('class')); // text-white fw-bol
 // console.log($heroCTA.getAttribute('href')); // https://imdac.github.io/mtm6302/
@@ -83,24 +67,17 @@ $heroCTA.getAttribute('target', '_blank')
 //removeAttribute()
 //Remove the attribute 'target' from the 'continue reading...' link
 
-$heroCTA.removeAttribute('target');
+
 
 
 /*** Manipulating classes ***/
-
-console.log( $hero.classList)
-
 // console.log(   $hero.classList)      // ["p-4 p-md-5 mb-4 rounded position-relative"]
 // Add class 'text-bg-dark' to the element with id 'hero'
-$hero.classList.add('text-bg-dark')
-
 
 // console.log($hero.classList)         // ["p-4 p-md-5 mb-4 rounded position-relative text-bg-dark"]
 
 // Remove class
 // Remove the class 'text-bg-dark' from the element with id 'hero
-
-$hero.classList.remove('text-bg-dark')
 
 // console.log(element.classList)      // ["p-4 p-md-5 mb-4 rounded position-relative"]
 
@@ -108,15 +85,7 @@ $hero.classList.remove('text-bg-dark')
 //Retreive the 'dark mode' button, and save it to $darkModeBtn const
 
 // $darkModeBtn.addEventListener('click', function() {
-
-const $darkModeBtn = document.getElementById('darkModeBtn')
-
     // toggle class here
-
-    $darkModeBtn.addEventListener('click', function(){
-        $hero.classList.toggle('text-bg-dark')
-    })
-
 
 // })
 
@@ -144,9 +113,6 @@ const blogs = [
 ]
 // Set the first post title using textContent
 
-document.querySelector('.post-title').textContent = blogs[0].title
-
 
 
 // Set the first post using innerHTML
-document.querySelector('.post').innerHTML = ''
